@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
-import {HeroListComponent} from '../heroes/components/hero-list.component';
 import {PageNotFoundComponent} from '../page-not-found.component';
 
 
@@ -11,7 +10,6 @@ import {PageNotFoundComponent} from '../page-not-found.component';
  *  双星号为所有不合法的路由配置，显示404
  */
 const appRoutes: Routes = [
-  {path: 'heroes', component : HeroListComponent},
   {path: '', redirectTo: '/heroes', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent},
 ];

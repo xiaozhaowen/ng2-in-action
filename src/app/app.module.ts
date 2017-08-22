@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { HeroesModule } from './heroes/heroes.module';
 import { PageNotFoundComponent } from './page-not-found.component';
 import {AppRoutingModule} from './routing/app-routing.module';
+
 
 
 /**
@@ -16,11 +18,12 @@ import {AppRoutingModule} from './routing/app-routing.module';
     AppComponent,
     PageNotFoundComponent,
   ],
-  // 引入其他模块暴露出来的东西
+  // 引入其他模块暴露出来的东西,注意此处的引入顺序，业务模块一定要在AppRoutingModule之前引入
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HeroesModule
+    FormsModule,
+    HeroesModule,
+    AppRoutingModule
   ],
   // 本模块服务的创建者，放到此处之后全应用都可以访问
   providers: [],
