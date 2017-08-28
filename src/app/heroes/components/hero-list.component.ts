@@ -1,18 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Hero} from '../models/hero';
+import {HeroService} from '../services/hero.service';
 
 @Component({
-  selector: 'app-hero-list',
   templateUrl: './hero-list.component.html',
   styleUrls: ['./hero-list.component.css']
 })
 export class HeroListComponent implements OnInit {
 
-  constructor() { }
+  heroes: Hero[];
+  selectedHero: Hero;
 
-  ngOnInit() {
-    let a = 10;
-    a += 1;
-    console.log('钩子函数启动');
+  constructor(private heroService: HeroService) {
+  }
+
+  ngOnInit(): void {
+    this.getHeroes();
+  }
+
+  getHeroes(): void {
+    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
+  }
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
   }
 
 }

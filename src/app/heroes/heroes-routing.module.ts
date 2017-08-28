@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
-import {Routes, RouterModule} from "@angular/router";
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 
-import {HeroListComponent} from "./components/hero-list.component";
-import {HeroDetailComponent} from "./components/hero-detail.component";
+import {HeroListComponent} from './components/hero-list.component';
+import {HeroDetailComponent} from './components/hero-detail.component';
 
-const heroRoutes : Routes=[
-  { path: 'heroes', component: HeroListComponent},
-  { path: 'hero/:id', component: HeroDetailComponent}
+const heroRoutes: Routes = [
+  {path: 'heroes', component: HeroListComponent},
+  {path: 'hero/:id', component: HeroDetailComponent}
 ];
 
 /**
@@ -16,8 +16,9 @@ const heroRoutes : Routes=[
   imports: [
     RouterModule.forChild(heroRoutes)
   ],
-  exports: [
+  exports: [// 为何导出？？？
     RouterModule
   ]
 })
-export class HeroesRoutingModule { }
+export class HeroesRoutingModule {
+}
