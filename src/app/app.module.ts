@@ -6,7 +6,7 @@ import {AppComponent} from './app.component';
 import {HeroesModule} from './heroes/heroes.module';
 import {PageNotFoundComponent} from './page-not-found.component';
 import {AppRoutingModule} from './routing/app-routing.module';
-import { BasementRoutingModule } from './basement/basement-routing.module';
+import {BasementModule} from './basement/basement.module';
 
 
 /**
@@ -24,7 +24,7 @@ import { BasementRoutingModule } from './basement/basement-routing.module';
     BrowserModule,
     FormsModule,
     HeroesModule,
-    BasementRoutingModule,
+    BasementModule,
     AppRoutingModule
   ],
   // 本模块服务的创建者，放到此处之后全应用都可以访问

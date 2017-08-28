@@ -1,0 +1,12 @@
+.demo-image{
+  width: 200px;
+}
+
+.container{
+  height: 100px;
+  background-color: #BBD8DC;
+}
+
+.error{
+  border: red 1px solid;
+}
