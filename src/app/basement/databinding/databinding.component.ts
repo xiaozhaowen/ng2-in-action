@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {StudentService} from '../../data-factory/student.service';
+import {Student} from '../../data-factory/student';
 
 @Component({
   selector: 'app-bm-databinding',
@@ -12,10 +14,17 @@ export class DatabindingComponent implements OnInit {
   girlImageUrl = 'assets/images/girl.jpg';
   isUnchanged = false;
 
-  constructor() {
+  studentList: Student[];
+
+  constructor(private studentService: StudentService) {
   }
 
   ngOnInit() {
+    this.loadList();
+  }
+
+  loadList() {
+    this.studentService.getStudents().then((list) => this.studentList = list);
   }
 
 }

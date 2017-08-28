@@ -1,6 +1,4 @@
-<h2>
-  单向绑定
-</h2>
+<h2>单向绑定</h2>
 <div>
   插值绑定 {{playerName}}
   <img class="demo-image" [src]="girlImageUrl">
@@ -8,4 +6,12 @@
   <button [disabled]="isUnchanged">Cancel is disabled</button>
 
   <div [ngClass]="classes">[ngClass] binding to the classes property</div>
+</div>
+
+
+<h2>列表</h2>
+<div>
+  <p *ngFor="let student of studentList">
+    {{student.name}}
+  </p>
 </div>
