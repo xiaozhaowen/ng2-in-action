@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-
 import {PageNotFoundComponent} from '../page-not-found.component';
 
 
@@ -15,6 +14,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
+  // 只有根模块的路由才可以使用forRoot方法，其他子模块的路由使用forChild方法
   imports: [
     RouterModule.forRoot(appRoutes, {enableTracing: true})
   ],

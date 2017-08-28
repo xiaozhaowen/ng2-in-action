@@ -16,7 +16,7 @@ const heroRoutes: Routes = [
   imports: [
     RouterModule.forChild(heroRoutes)
   ],
-  exports: [// 为何导出？？？
+  exports: [// TODO 为何还导出，根模块已经导出一次了？？？
     RouterModule
   ]
 })

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
  * 注解是一个函数，接收一个对象参数
  */
 @Component({
-  // 组件的选择器，对应到html中就是<app-root></app-root>
+  // 组件的选择器，对应到html中就是<app-root></app-root>，如果是路由控制，则可以省略
   selector: 'app-root',
   // 组件对应的html模板文件
   templateUrl: './app.component.html',
@@ -14,5 +14,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  // 组件的属性，用于绑定到界面
   title = 'Angular2';
 }

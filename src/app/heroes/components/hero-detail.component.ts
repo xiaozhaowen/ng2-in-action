@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Hero} from '../models/hero';
+import {Hero} from '../entities/hero';
 
 @Component({
   templateUrl: './hero-detail.component.html',
