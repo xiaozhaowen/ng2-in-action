@@ -5,9 +5,20 @@ import {FatherComponent} from './communicate/father.component';
 import {BasementComponent} from './basement.component';
 
 const routes: Routes = [
-  {path: 'basement', component: BasementComponent},
-  {path: 'bmbinding', component: DatabindingComponent, outlet: 'baseOutlet'},
-  {path: 'communication', component: FatherComponent, outlet: 'baseOutlet'}
+  {
+    path: 'basement',
+    component: BasementComponent,
+    children: [
+      {
+        path: 'dataBinding',
+        component: DatabindingComponent
+      },
+      {
+        path: 'communication',
+        component: FatherComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({

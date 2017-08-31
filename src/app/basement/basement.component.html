@@ -1,7 +1,8 @@
-<h2>ng2基础</h2>
+<h2>Angular2 基础练习业务模块</h2>
 
 <nav>
-  <a routerLink="/bmbinding">数据绑定</a>
-  <a routerLink="/communication">组件通信</a>
+  <a (click)="onSelect('dataBinding')">数据绑定</a>
+  <a (click)="onSelect('communication')">组件通信</a>
+  <a (click)="onSelect('directive')">指令</a>
 </nav>
-<router-outlet name="baseOutlet"></router-outlet>
+<router-outlet ></router-outlet>

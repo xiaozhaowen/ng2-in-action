@@ -16,7 +16,7 @@ const appRoutes: Routes = [
 @NgModule({
   // 只有根模块的路由才可以使用forRoot方法，其他子模块的路由使用forChild方法
   imports: [
-    RouterModule.forRoot(appRoutes, {enableTracing: true})
+    RouterModule.forRoot(appRoutes, {enableTracing: false})
   ],
   exports: [
     RouterModule
