@@ -16,7 +16,6 @@ import {Crisis, CrisisService} from './crisis.service';
         {{ crisis.name }}
       </li>
     </ul>
-
     <router-outlet></router-outlet>
   `
 })
@@ -44,7 +43,7 @@ export class CrisisListComponent implements OnInit {
   onSelect(crisis: Crisis) {
     this.selectedId = crisis.id;
 
-    // Navigate with relative link
+    // 使用相对路径导航
     this.router.navigate([crisis.id], {relativeTo: this.route});
   }
 }

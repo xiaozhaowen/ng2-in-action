@@ -5,9 +5,11 @@ import {FormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
 import {HeroesModule} from './heroes/heroes.module';
 import {PageNotFoundComponent} from './page-not-found.component';
-import {AppRoutingModule} from './routing/app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 import {BasementModule} from './basement/basement.module';
 import {DataFactoryModule} from './data-factory/data-factory.module';
+import {CrisisCenterModule} from './crisis-center/crisis-center.module';
+import {DialogService} from './dialog.service';
 
 
 /**
@@ -27,10 +29,13 @@ import {DataFactoryModule} from './data-factory/data-factory.module';
     HeroesModule,
     BasementModule,
     DataFactoryModule,
+    CrisisCenterModule,
     AppRoutingModule
   ],
   // 本模块服务的创建者，放到此处之后全应用都可以访问
-  providers: [],
+  providers: [
+    DialogService
+  ],
   // 只有根模块才可以配置此属性，用于启动app
   bootstrap: [AppComponent]
 })
