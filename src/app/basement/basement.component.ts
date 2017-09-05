@@ -19,6 +19,7 @@ export class BasementComponent implements OnInit {
     this.subjects.push({name: 'dataBinding', remark: '数据绑定'});
     this.subjects.push({name: 'communication', remark: '组件通信'});
     this.subjects.push({name: 'directive', remark: '指令'});
+    this.subjects.push({name: 'http', remark: 'http'});
 
   }
 

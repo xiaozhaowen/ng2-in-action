@@ -3,6 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {DatabindingComponent} from './databinding/databinding.component';
 import {FatherComponent} from './communicate/father.component';
 import {BasementComponent} from './basement.component';
+import {LoginComponent} from './http/login.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'communication',
         component: FatherComponent
+      },
+      {
+        path: 'http',
+        component: LoginComponent
       }
     ]
   }

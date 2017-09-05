@@ -33,9 +33,11 @@ export class CrisisDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private router: Router,
               public dialogService: DialogService) {
+    console.log('CrisisDetailComponent 构造函数执行');
   }
 
   ngOnInit() {
+    console.log('CrisisDetailComponent 执行ngOnInit');
     this.route.data
       .subscribe((data: { crisis: Crisis }) => {
         this.editName = data.crisis.name;

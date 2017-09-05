@@ -5,16 +5,21 @@ import {BasementRoutingModule} from './basement-routing.module';
 import {DatabindingComponent} from './databinding/databinding.component';
 import {FatherComponent} from './communicate/father.component';
 import {BasementComponent} from './basement.component';
+import {LoginComponent} from './http/login.component';
+import {HttpModule} from '@angular/http';
+
 
 @NgModule({
   imports: [
     CommonModule,
-    BasementRoutingModule
+    BasementRoutingModule,
+    HttpModule
   ],
   declarations: [
     BasementComponent,
     DatabindingComponent,
-    FatherComponent
+    FatherComponent,
+    LoginComponent
   ]
 })
 export class BasementModule {
