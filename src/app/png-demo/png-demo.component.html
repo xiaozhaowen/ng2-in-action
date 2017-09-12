@@ -1,0 +1,7 @@
+<nav>
+  <a *ngFor="let subject of subjects" (click)="doSelect(subject.name)">
+    {{subject.remark}}
+  </a>
+
+</nav>
+<router-outlet ></router-outlet>

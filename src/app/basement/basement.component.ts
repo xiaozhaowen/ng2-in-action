@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import {NavSubject} from '../shared/subject';
 @Component({
   templateUrl: './basement.component.html',
   styles: [`a {
@@ -9,7 +10,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class BasementComponent implements OnInit {
 
-  subjects: Subject[];
+  subjects: NavSubject[];
 
   constructor(private router: Router, private route: ActivatedRoute) {
     this.subjects = [];
@@ -20,6 +21,9 @@ export class BasementComponent implements OnInit {
     this.subjects.push({name: 'communication', remark: '组件通信'});
     this.subjects.push({name: 'directive', remark: '指令'});
     this.subjects.push({name: 'http', remark: 'http'});
+    this.subjects.push({name: 'ctxmenu', remark: '右键'});
+    this.subjects.push({name: 'office-ctx', remark: '官方右键例子'});
+
 
   }
 
@@ -31,7 +35,5 @@ export class BasementComponent implements OnInit {
 }
 
 
-class Subject {
-  name: string;
-  remark: string;
-}
+
+

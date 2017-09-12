@@ -1,0 +1,55 @@
+<h2>ngx-contextmenu 例子</h2>
+
+<ul>
+  <li *ngFor="let item of items" [ngSwitch]="item.subject" class="chat-item">
+
+    <div *ngSwitchCase="'text'" [contextMenu]="basicMenu" [contextMenuSubject]="item"> {{item?.name}}</div>
+    <div *ngSwitchCase="'image'" [contextMenu]="fileMenu" [contextMenuSubject]="item"> {{item?.name}}</div>
+    <div *ngSwitchCase="'file'" [contextMenu]="fileMenu" [contextMenuSubject]="item"> {{item?.name}}</div>
+    <div *ngSwitchCase="'voice'"> {{item?.name}}</div>
+  </li>
+</ul>
+
+<context-menu #basicMenu>
+  <ng-template contextMenuItem (execute)="doCopy($event.item)">
+    复制
+  </ng-template>
+  <ng-template contextMenuItem divider="true"></ng-template>
+  <ng-template contextMenuItem let-item
+               [enabled]="canRecall"
+               (execute)="showMessage($event.item.name + ' said: ' + $event.item.otherProperty)">
+    撤回{{item?.otherProperty==='timeout'?'超过2分钟':''}}
+  </ng-template>
+
+  <ng-template contextMenuItem let-item
+               [visible]="canDelete"
+               (execute)="showMessage($event.item.name + ' said: ' + $event.item.otherProperty)">
+    删除
+  </ng-template>
+
+</context-menu>
+
+
+<context-menu #fileMenu>
+  <ng-template contextMenuItem (execute)="doTransmit($event.item)">
+    转发
+  </ng-template>
+  <ng-template contextMenuItem divider="true"></ng-template>
+
+
+  <ng-template contextMenuItem let-item
+               [visible]="canDelete"
+               (execute)="showMessage($event.item.name + ' said: ' + $event.item.otherProperty)">
+    删除
+  </ng-template>
+  <ng-template contextMenuItem let-item
+               [visible]="canDelete"
+               (execute)="showMessage($event.item.name + ' said: ' + $event.item.otherProperty)">
+    文件夹中打开
+  </ng-template>
+
+</context-menu>
+
+
+
+

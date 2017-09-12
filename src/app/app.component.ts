@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
   // 组件对应的html模板文件
   templateUrl: './app.component.html',
   // 组件对应的css文件数组
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   // 组件的属性，用于绑定到界面

@@ -4,6 +4,8 @@ import {DatabindingComponent} from './databinding/databinding.component';
 import {FatherComponent} from './communicate/father.component';
 import {BasementComponent} from './basement.component';
 import {LoginComponent} from './http/login.component';
+import {CmComponent} from './context-menu/cm.component';
+import {OfficeDemoComponent} from './context-menu/office-demo.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,14 @@ const routes: Routes = [
       {
         path: 'http',
         component: LoginComponent
+      },
+      {
+        path: 'ctxmenu',
+        component: CmComponent
+      },
+      {
+        path: 'office-ctx',
+        component: OfficeDemoComponent
       }
     ]
   }

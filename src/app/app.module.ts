@@ -10,6 +10,8 @@ import {BasementModule} from './basement/basement.module';
 import {DataFactoryModule} from './data-factory/data-factory.module';
 import {CrisisCenterModule} from './crisis-center/crisis-center.module';
 import {DialogService} from './dialog.service';
+import { CoreModule } from './core/core.module';
+import {PngDemoModule} from './png-demo/png-demo.module';
 
 
 /**
@@ -30,7 +32,9 @@ import {DialogService} from './dialog.service';
     BasementModule,
     DataFactoryModule,
     CrisisCenterModule,
-    AppRoutingModule
+    PngDemoModule,
+    AppRoutingModule,
+    CoreModule
   ],
   // 本模块服务的创建者，放到此处之后全应用都可以访问
   providers: [
