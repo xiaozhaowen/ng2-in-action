@@ -12,6 +12,7 @@ import {CrisisCenterModule} from './crisis-center/crisis-center.module';
 import {DialogService} from './dialog.service';
 import { CoreModule } from './core/core.module';
 import {PngDemoModule} from './png-demo/png-demo.module';
+import { UiModule } from './ui/ui.module';
 
 
 /**
@@ -33,8 +34,9 @@ import {PngDemoModule} from './png-demo/png-demo.module';
     DataFactoryModule,
     CrisisCenterModule,
     PngDemoModule,
-    AppRoutingModule,
-    CoreModule
+    CoreModule,
+    UiModule,
+    AppRoutingModule
   ],
   // 本模块服务的创建者，放到此处之后全应用都可以访问
   providers: [

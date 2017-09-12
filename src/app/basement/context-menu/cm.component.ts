@@ -4,7 +4,7 @@ import {ContextMenuComponent} from 'ngx-contextmenu';
 @Component({
   selector: 'app-context-menu',
   templateUrl: './cm.component.html',
-  styleUrls: ['./cm.component.css']
+  styleUrls: ['./cm.component.scss']
 })
 export class CmComponent implements OnInit {
 
